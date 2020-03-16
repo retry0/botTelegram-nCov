@@ -24,7 +24,7 @@ def list_countries(message):
     print("[" + str(datetime.now()) + "] /countries by " +
           message.from_user.username)
     r_countries = req.get('https://corona.lmao.ninja/countries').json()
-    res_msg = "*Supported Countries* 🌎" + ("\n"*2)
+    res_msg = "*List Negara* 🌎" + ("\n"*2)
     for country_obj in r_countries:
         res_msg = "\n" + res_msg + country_obj['country'] + "\n"
     bot.send_message(message.chat.id, res_msg,
@@ -46,24 +46,24 @@ def corona_stat(message):
         if input_country == "all":
             r_all = req.get('https://corona.lmao.ninja/all').json()
             res_msg = f"*Global Statistics* 🌐" + \
-                ("\n"*2) + f"🔴 *Total number of Cases:* {r_all['cases']}" + \
-                "\n" + f"💀 *Total number of Deaths:* {r_all['deaths']}" + \
-                "\n" + f"🎉 *Total number of Recovers:* {r_all['recovered']}"
+                ("\n"*2) + f"🔴 *Jumlah Kasus:* {r_all['cases']}" + \
+                "\n" + f"💀 *Jumlah Kematian:* {r_all['deaths']}" + \
+                "\n" + f"🎉 *Jumlah Sembuh:* {r_all['recovered']}"
             bot.send_message(message.chat.id, res_msg, parse_mode='Markdown')
         else:
             r_countries = req.get('https://corona.lmao.ninja/countries').json()
             flag = False
             for country_obj in r_countries:
                 if country_obj["country"].lower() == input_country.lower():
-                    res_msg = f"*Statistics for* {country_obj['country'].upper()} 📍" + \
-                        ("\n"*2) + f"🔴 *Total number of Cases:* {country_obj['cases']}" + \
-                        "\n" + f"😢 *Number of New Cases:* {country_obj['todayCases']}" + \
-                        ("\n"*2) + f"💀 *Total number of Deaths:* {country_obj['deaths']}" + \
-                        "\n" + f"😱 *Number of New Deaths:* {country_obj['todayDeaths']}" + \
+                    res_msg = f"*Update Wabah Corona dari* {country_obj['country'].upper()} 📍" + \
+                        ("\n"*2) + f"🔴 *Jumlah Kasus:* {country_obj['cases']}" + \
+                        "\n" + f"😢 *Angka kasus baru:* {country_obj['todayCases']}" + \
+                        ("\n"*2) + f"💀 *Jumlah Kematian:* {country_obj['deaths']}" + \
+                        "\n" + f"😱 *Angka kematian baru:* {country_obj['todayDeaths']}" + \
                         ("\n"*2) +\
-                        f"🎉 *Total number of Recovers:* {country_obj['recovered']}" + \
+                        f"🎉 *Jumlah Sembuh:* {country_obj['recovered']}" + \
                         "\n" + \
-                        f"🙏 *Total number of Critical Conditions:* {country_obj['critical']}"
+                        f"🙏 *Jumlah total Kondisi Kritis:* {country_obj['critical']}"
                     bot.send_message(message.chat.id, res_msg,
                                      parse_mode='Markdown')
                     flag = True
