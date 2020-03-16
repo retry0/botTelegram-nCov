@@ -37,3 +37,6 @@ This project is [MIT licensed](LICENSE).
 
 # API (Data)
 `https://corona.lmao.ninja/`
+
+# AUTHOR
+LINGGA ADI PRATAMA 
