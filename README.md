@@ -32,8 +32,8 @@ run command `python3 scirpt.py`
 This project is [MIT licensed](LICENSE).
 
 ## Deploy on Heroku
-- 
+- [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 
-## API
-1108029941:AAGkHMtVFPT1-SsL5dRZn7gR65hxWD9-HH0
+# API (Data)
+`https://corona.lmao.ninja/`
