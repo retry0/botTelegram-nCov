@@ -31,6 +31,9 @@ run command `python3 scirpt.py`
 ## License
 This project is [MIT licensed](LICENSE).
 
+## Deploy on Heroku
+- 
+
 
 ## API
 1108029941:AAGkHMtVFPT1-SsL5dRZn7gR65hxWD9-HH0
