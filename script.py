@@ -55,7 +55,7 @@ def corona_stat(message):
             flag = False
             for country_obj in r_countries:
                 if country_obj["country"].lower() == input_country.lower():
-                    res_msg = f"*Update Wabah Corona dari* {country_obj['country'].upper()} 📍" + \
+                    res_msg = f"*Update wabah corona dari* {country_obj['country'].upper()} 📍" + \
                         ("\n"*2) + f"🔴 *Jumlah Kasus:* {country_obj['cases']}" + \
                         "\n" + f"😢 *Angka kasus baru:* {country_obj['todayCases']}" + \
                         ("\n"*2) + f"💀 *Jumlah Kematian:* {country_obj['deaths']}" + \
