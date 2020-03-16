@@ -45,7 +45,7 @@ def corona_stat(message):
         input_country = " ".join(msg).strip()
         if input_country == "all":
             r_all = req.get('https://corona.lmao.ninja/all').json()
-            res_msg = f"*Global Statistics* 🌐" + \
+            res_msg = f"*Update wabah corona di dunia* 🌐" + \
                 ("\n"*2) + f"🔴 *Jumlah Kasus:* {r_all['cases']}" + \
                 "\n" + f"💀 *Jumlah Kematian:* {r_all['deaths']}" + \
                 "\n" + f"🎉 *Jumlah Sembuh:* {r_all['recovered']}"
